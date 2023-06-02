@@ -119,6 +119,7 @@ Resources:
         - ContainerPort: 8080
   ECSALB:
     Type: AWS::ElasticLoadBalancingV2::LoadBalancer
+    DependsOn: InternetGateway
     Properties:
       Name: ECSALB-fargate
       Scheme: internet-facing
